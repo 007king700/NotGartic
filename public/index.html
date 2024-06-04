@@ -4,31 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gartic Clone</title>
-    <style>
-        #canvas {
-            border: 1px solid black;
-        }
-        #controls {
-            margin-top: 20px;
-        }
-        #chat {
-            width: 300px;
-            height: 600px;
-            border-left: 1px solid black;
-            padding-left: 10px;
-            overflow-y: auto;
-        }
-        #game {
-            display: flex;
-        }
-        #messages {
-            list-style-type: none;
-            padding: 0;
-        }
-        #messages li {
-            margin-bottom: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id="login">
@@ -39,11 +15,30 @@
         <button id="joinRoomBtn">Join Room</button>
     </div>
     <div id="game" style="display: none;">
-        <canvas id="canvas" width="800" height="600"></canvas>
+        <div id="sidebar">
+            <h3>Players</h3>
+            <ul id="players"></ul>
+            <button id="startGameBtn" style="display: none;">Start Game</button>
+        </div>
+        <div id="canvas-container">
+            <canvas id="canvas" width="2000" height="1500"></canvas>
+            <div id="currentWord" style="display: none;"></div>
+        </div>
         <div id="chat">
             <ul id="messages"></ul>
             <input type="text" id="guess" placeholder="Enter your guess">
             <button id="sendGuessBtn">Send Guess</button>
+        </div>
+        <div id="leaderboard" style="display: none;">
+            <h3>Leaderboard</h3>
+            <ul id="scores"></ul>
+            <button id="leaveRoomBtn">Leave Room</button>
+        </div>
+        <div id="wordChoices" style="display: none;">
+            <h3>Choose a word</h3>
+            <button id="word1"></button>
+            <button id="word2"></button>
+            <button id="word3"></button>
         </div>
     </div>
     <script src="/socket.io/socket.io.js"></script>

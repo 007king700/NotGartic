@@ -1,0 +1,160 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+#login input {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#login button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#game {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+#sidebar {
+    width: 200px;
+    border-right: 1px solid black;
+    padding-right: 10px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#sidebar h3 {
+    margin: 0;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+}
+
+#sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+#sidebar ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#sidebar ul li.bold {
+    font-weight: bold;
+    background-color: #e0e0e0;
+}
+
+#canvas-container {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#canvas {
+    width: 80%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    border: 1px solid black;
+    background-color: #fff;
+}
+
+#currentWord {
+    position: absolute;
+    top: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#chat {
+    width: 300px;
+    height: 100%;
+    border-left: 1px solid black;
+    padding-left: 10px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#chat ul {
+    list-style-type: none;
+    padding: 0;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+#chat ul li {
+    margin-bottom: 10px;
+}
+
+#chat input {
+    padding: 10px;
+    font-size: 16px;
+}
+
+#wordChoices {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#wordChoices button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#leaderboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#leaderboard ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#leaderboard ul li {
+    margin-bottom: 10px;
+}
+
+#leaderboard button {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
