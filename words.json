@@ -1,3 +1,9 @@
 {
-    "words": ["cat", "dog", "house", "car", "tree", "ball", "apple", "chair", "book", "phone"]
+    "words": [
+        "cat", "dog", "house", "car", "tree", "ball", "apple", "chair", "book", "phone",
+        "table", "pen", "bed", "fish", "bird", "door", "window", "cup", "shirt", "shoe",
+        "hat", "coat", "water", "milk", "bread", "cake", "cheese", "egg", "coffee", "tea",
+        "fork", "spoon", "knife", "plate", "bowl", "city", "village", "road", "train", "bus",
+        "bike", "garden", "flower", "grass", "mountain", "river", "sky", "sun", "moon", "star"
+    ]
 }

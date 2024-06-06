@@ -7,13 +7,20 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Login and Room creation/joining section -->
     <div id="login">
         <h2>Join or Create a Room</h2>
         <input type="text" id="roomName" placeholder="Room Name">
         <input type="text" id="username" placeholder="Username">
+        <label>
+            <input type="checkbox" id="publicRoomToggle"> Public Room
+        </label>
         <button id="createRoomBtn">Create Room</button>
         <button id="joinRoomBtn">Join Room</button>
+        <button id="listPublicRoomsBtn">List Public Rooms</button>
+        <div id="publicRoomsList"></div>
     </div>
+    <!-- Game section, initially hidden -->
     <div id="game" style="display: none;">
         <div id="sidebar">
             <h3>Players</h3>
@@ -35,10 +42,36 @@
             <button id="leaveRoomBtn">Leave Room</button>
         </div>
         <div id="wordChoices" style="display: none;">
+            <div id="wordChoicesCountdown">10s</div>
             <h3>Choose a word</h3>
             <button id="word1"></button>
             <button id="word2"></button>
             <button id="word3"></button>
+        </div>
+        <div id="toolbar" style="display: none;">
+            <div id="tools">
+                <button id="eraseAll">Erase All</button>
+            </div>
+            <div id="colors">
+                <div class="color-option active" style="background-color: black;" data-color="#000000"></div>
+                <div class="color-option" style="background-color: red;" data-color="#ff0000"></div>
+                <div class="color-option" style="background-color: blue;" data-color="#0000ff"></div>
+                <div class="color-option" style="background-color: green;" data-color="#008000"></div>
+                <div class="color-option" style="background-color: yellow;" data-color="#ffff00"></div>
+                <div class="color-option" style="background-color: purple;" data-color="#800080"></div>
+                <div class="color-option" style="background-color: orange;" data-color="#ffa500"></div>
+                <div class="color-option" style="background-color: pink;" data-color="#ffc0cb"></div>
+                <div class="color-option" style="background-color: brown;" data-color="#a52a2a"></div>
+                <div class="color-option" style="background-color: gray;" data-color="#808080"></div>
+                <div class="color-option" style="background-color: white;" data-color="#ffffff"></div>
+            </div>
+            <div id="thickness">
+                <div class="thickness-option active" data-thickness="5">5</div>
+                <div class="thickness-option" data-thickness="10">10</div>
+                <div class="thickness-option" data-thickness="15">15</div>
+                <div class="thickness-option" data-thickness="20">20</div>
+                <div class="thickness-option" data-thickness="25">25</div>
+            </div>
         </div>
     </div>
     <script src="/socket.io/socket.io.js"></script>

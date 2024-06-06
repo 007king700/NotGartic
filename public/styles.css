@@ -1,3 +1,4 @@
+/* General body styling */
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
@@ -9,6 +10,7 @@ body {
     overflow: hidden;
 }
 
+/* Login section styling */
 #login {
     display: flex;
     flex-direction: column;
@@ -29,12 +31,14 @@ body {
     cursor: pointer;
 }
 
+/* Game section styling */
 #game {
     display: flex;
     height: 100%;
     width: 100%;
 }
 
+/* Sidebar styling */
 #sidebar {
     width: 200px;
     border-right: 1px solid black;
@@ -70,6 +74,7 @@ body {
     background-color: #e0e0e0;
 }
 
+/* Canvas container styling */
 #canvas-container {
     flex-grow: 1;
     display: flex;
@@ -86,6 +91,7 @@ body {
     background-color: #fff;
 }
 
+/* Current word display styling */
 #currentWord {
     position: absolute;
     top: 10px;
@@ -95,6 +101,7 @@ body {
     border-radius: 5px;
 }
 
+/* Chat section styling */
 #chat {
     width: 300px;
     height: 100%;
@@ -122,20 +129,39 @@ body {
     font-size: 16px;
 }
 
+/* Word choices section styling */
 #wordChoices {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 1000;
+}
+
+#wordChoices h3 {
+    margin-top: 0;
+}
+
+#wordChoicesCountdown {
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
 #wordChoices button {
-    margin: 5px;
+    display: block;
+    width: 100%;
+    margin: 5px 0;
     padding: 10px;
     font-size: 16px;
     cursor: pointer;
 }
 
+/* Leaderboard section styling */
 #leaderboard {
     display: flex;
     flex-direction: column;
@@ -157,4 +183,92 @@ body {
     padding: 10px;
     font-size: 16px;
     cursor: pointer;
+}
+
+/* Toolbar section styling */
+#toolbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#tools {
+    margin-right: 20px;
+}
+
+#tools button {
+    margin-right: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#colors, #thickness {
+    display: flex;
+    margin: 0 20px;
+}
+
+.color-option, .thickness-option {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    cursor: pointer;
+    border: 1px solid #000;
+}
+
+.color-option {
+    border-radius: 50%;
+}
+
+.thickness-option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.active {
+    border: 3px solid #4CAF50;
+}
+
+/* Public room list item styling */
+#login label {
+    margin: 5px;
+    font-size: 16px;
+}
+
+#login input[type="checkbox"] {
+    margin-left: 10px;
+}
+
+#publicRoomsList {
+    margin-top: 10px;
+}
+
+.public-room {
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.public-room:hover {
+    background-color: #f0f0f0;
+}
+
+/* Leave room countdown styling */
+#leaveRoomCountdown {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    display: none; /* Initially hidden */
 }
